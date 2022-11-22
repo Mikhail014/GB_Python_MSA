@@ -32,14 +32,24 @@
 # res = findMaxNum(arrNums)
 # print(res)
 
-n = int(input("Введите число: "))
+# n = int(input("Введите число: "))
+#
+# def printNumsInARange(num):
+#     nums = str()
+#     for i in range(-num, num + 1):
+#         if i != num: nums += f"{str(i)}, "
+#         else: nums += f"{str(i)}"
+#     return nums
+#
+# res = printNumsInARange(n)
+# print(res)
 
-def printNumsInARange(num):
-    nums = str()
-    for i in range(-num, num + 1):
-        if i != num: nums += f"{str(i)}, "
-        else: nums += f"{str(i)}"
-    return nums
+nf = float(input("Введите дробное число: "))
 
-res = printNumsInARange(n)
-print(res)
+def firstDigitFloatNumber(nf):
+    return int((nf * 10) % 10)
+
+res = firstDigitFloatNumber(nf)
+
+if res != 0: print(f"Первая цифра дробной части числа {nf} = {res}")
+else: print("Вы ввели целое число!!!")
