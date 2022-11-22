@@ -15,19 +15,31 @@
 #
 # checkQuad(n1, n2)
 
-n1 = int(input("Первое число: "))
-n2 = int(input("Второе число: "))
-n3 = int(input("Третье число: "))
-n4 = int(input("Четвертое число: "))
-n5 = int(input("Пятое число: "))
+# n1 = int(input("Первое число: "))
+# n2 = int(input("Второе число: "))
+# n3 = int(input("Третье число: "))
+# n4 = int(input("Четвертое число: "))
+# n5 = int(input("Пятое число: "))
+#
+# arrNums = [n1, n2, n3, n4, n5]
+#
+# def findMaxNum(arr):
+#     max = arr[0]
+#     for i in arr:
+#         if i > max: max = i
+#     return max
+#
+# res = findMaxNum(arrNums)
+# print(res)
 
-arrNums = [n1, n2, n3, n4, n5]
+n = int(input("Введите число: "))
 
-def findMaxNum(arr):
-    max = arr[0]
-    for i in arr:
-        if i > max: max = i
-    return max
+def printNumsInARange(n):
+    nums = str()
+    for i in range(-n, n + 1):
+        if i != n: nums += f"{str(i)}, "
+        else: nums += f"{str(i)}"
+    return nums
 
-res = findMaxNum(arrNums)
+res = printNumsInARange(n)
 print(res)
