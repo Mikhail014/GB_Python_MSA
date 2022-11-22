@@ -34,10 +34,10 @@
 
 n = int(input("Введите число: "))
 
-def printNumsInARange(n):
+def printNumsInARange(num):
     nums = str()
-    for i in range(-n, n + 1):
-        if i != n: nums += f"{str(i)}, "
+    for i in range(-num, num + 1):
+        if i != num: nums += f"{str(i)}, "
         else: nums += f"{str(i)}"
     return nums
 
