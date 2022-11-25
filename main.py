@@ -54,10 +54,18 @@
 # if res != 0: print(f"Первая цифра дробной части числа {nf} = {res}")
 # else: print("Вы ввели целое число!!!")
 
+# n = int(input("Введите число: "))
+# res = [1]
+#
+# for i in range(1, n):
+#     res.append(res[-1] * -3)
+#
+# print(res)
+
 n = int(input("Введите число: "))
 res = [1]
 
 for i in range(1, n):
-    res.append(res[-1] * -3)
+    res.append(3 * i + 1)
 
 print(res)
