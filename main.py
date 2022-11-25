@@ -44,12 +44,20 @@
 # res = printNumsInARange(n)
 # print(res)
 
-nf = float(input("Введите дробное число: "))
+# nf = float(input("Введите дробное число: "))
+#
+# def firstDigitFloatNumber(nf):
+#     return int((nf * 10) % 10)
+#
+# res = firstDigitFloatNumber(nf)
+#
+# if res != 0: print(f"Первая цифра дробной части числа {nf} = {res}")
+# else: print("Вы ввели целое число!!!")
 
-def firstDigitFloatNumber(nf):
-    return int((nf * 10) % 10)
+n = int(input("Введите число: "))
+res = [1]
 
-res = firstDigitFloatNumber(nf)
+for i in range(1, n):
+    res.append(res[-1] * -3)
 
-if res != 0: print(f"Первая цифра дробной части числа {nf} = {res}")
-else: print("Вы ввели целое число!!!")
+print(res)
