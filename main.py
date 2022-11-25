@@ -62,10 +62,23 @@
 #
 # print(res)
 
-n = int(input("Введите число: "))
-res = [1]
+# n = int(input("Введите число: "))
+# res = [1]
+#
+# for i in range(1, n):
+#     res.append(3 * i + 1)
+#
+# print(res)
 
-for i in range(1, n):
-    res.append(3 * i + 1)
+s1 = input("Str 1: ")
+s2 = input("Str 2: ")
+entry = 0
 
-print(res)
+len_s2 = len(s2)
+count = len(s1) - len_s2 + 1
+
+for i in range(count):
+    if s1[i : i+len_s2] == s2:
+        entry += 1
+
+print(f"Количество вхождений: {entry}")
