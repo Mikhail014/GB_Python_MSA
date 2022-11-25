@@ -1,8 +1,8 @@
-num = float(input("Введите число: "))
+num = input("Введите число: ")
 sum = 0
 
-while num != 0:
-    sum += num % 10
-    num //= 10
+for i in num:
+    if i.isdigit():
+        sum += int(i)
 
 print(f"Сумма цифр: {int(sum)}")
