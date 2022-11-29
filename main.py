@@ -113,18 +113,18 @@
 #     print(f"Числа {num} в данном списке нет")
 
 
-str = input("Введите строку: ")
-arrStr = ["qwe", "ser", "fdr", "fdr", "gtredf", "qwe", "ktg", "ser"]
-
-def get_index_second_occur_of_str(text, arr):
-    count_entry = 0
-    for i, v in enumerate(arr):
-        if text == v:
-            count_entry += 1
-            if count_entry == 2:
-                return i
-    return -1
-
-res = get_index_second_occur_of_str(str, arrStr)
-print(res)
+# str = input("Введите строку: ")
+# arrStr = ["qwe", "ser", "fdr", "fdr", "gtredf", "qwe", "ktg", "ser"]
+#
+# def get_index_second_occur_of_str(text, arr):
+#     count_entry = 0
+#     for i, v in enumerate(arr):
+#         if text == v:
+#             count_entry += 1
+#             if count_entry == 2:
+#                 return i
+#     return -1
+#
+# res = get_index_second_occur_of_str(str, arrStr)
+# print(res)
 
