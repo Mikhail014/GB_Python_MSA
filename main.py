@@ -70,15 +70,25 @@
 #
 # print(res)
 
-s1 = input("Str 1: ")
-s2 = input("Str 2: ")
-entry = 0
+# s1 = input("Str 1: ")
+# s2 = input("Str 2: ")
+# entry = 0
+#
+# len_s2 = len(s2)
+# count = len(s1) - len_s2 + 1
+#
+# for i in range(count):
+#     if s1[i : i+len_s2] == s2:
+#         entry += 1
+#
+# print(f"Количество вхождений: {entry}")
 
-len_s2 = len(s2)
-count = len(s1) - len_s2 + 1
+from time import time
 
-for i in range(count):
-    if s1[i : i+len_s2] == s2:
-        entry += 1
+n1 = int(input("Введите первое число: "))
+n2 = int(input("Введите второе число: "))
 
-print(f"Количество вхождений: {entry}")
+def rand_num(num1, num2):
+    return round((time() % 1) * (num2 - num1)) + num1
+
+print(rand_num(n1, n2))
