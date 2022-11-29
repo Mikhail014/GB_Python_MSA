@@ -15,4 +15,4 @@ while num != 0:
     num //= 2
 
 # print("".join(reversed(res)))
-print(res[::-1])
+print(f"Двоичное число: {res[::-1]}")
