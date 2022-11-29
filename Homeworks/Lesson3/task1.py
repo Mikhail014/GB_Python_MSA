@@ -20,4 +20,4 @@ for i, v in enumerate(arr_nums):
     if i % 2 != 0:
         sum_items += v
 
-print(f"Сумма: {sum_items}")
+print(f"Сумма нечетных позиций: {sum_items}")
