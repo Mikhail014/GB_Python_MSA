@@ -94,21 +94,37 @@
 # print(rand_num(n1, n2))
 
 
-arr = ["22", "33", "123", "fert", "ytyy", "55"]
+# arr = ["22", "33", "123", "fert", "ytyy", "55"]
+#
+# num = int(input("Введите число: "))
+#
+# def is_there_a_number_in_arr(n):
+#     for i in arr:
+#         if i.isdigit():
+#             if n == int(i):
+#                 return True
+#     return False
+#
+# res = is_there_a_number_in_arr(num)
+#
+# if res:
+#     print(f"Число {num} присуствует в данном списке")
+# else:
+#     print(f"Числа {num} в данном списке нет")
 
-num = int(input("Введите число: "))
 
-def is_there_a_number_in_arr(n):
-    for i in arr:
-        if i.isdigit():
-            if n == int(i):
-                return True
-    return False
+str = input("Введите строку: ")
+arrStr = ["qwe", "ser", "fdr", "fdr", "gtredf", "qwe", "ktg", "ser"]
 
-res = is_there_a_number_in_arr(num)
+def get_index_second_occur_of_str(text, arr):
+    count_entry = 0
+    for i, v in enumerate(arr):
+        if text == v:
+            count_entry += 1
+            if count_entry == 2:
+                return i
+    return -1
 
-if res:
-    print(f"Число {num} присуствует в данном списке")
-else:
-    print(f"Числа {num} в данном списке нет")
+res = get_index_second_occur_of_str(str, arrStr)
+print(res)
 
