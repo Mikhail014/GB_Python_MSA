@@ -20,4 +20,4 @@ res = []
 for i in range(ceil(size / 2)):
     res.append(arr_nums[i] * arr_nums[-i - 1])
 
-print(f"Результат: {res}")
+print(f"Результат (произведение пар чисел): {res}")
