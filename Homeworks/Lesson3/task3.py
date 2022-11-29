@@ -25,6 +25,6 @@ for i in arr_nums:
     elif frac_num < min:
         min = frac_num
 
-print(f"Разница: {round(max % 1 - min % 1, 3)}")
+print(f"Разница дробной части: {round(max % 1 - min % 1, 3)}")
 
 
