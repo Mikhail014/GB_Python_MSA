@@ -83,12 +83,32 @@
 #
 # print(f"Количество вхождений: {entry}")
 
-from time import time
+# from time import time
+#
+# n1 = int(input("Введите первое число: "))
+# n2 = int(input("Введите второе число: "))
+#
+# def rand_num(num1, num2):
+#     return round((time() % 1) * (num2 - num1)) + num1
+#
+# print(rand_num(n1, n2))
 
-n1 = int(input("Введите первое число: "))
-n2 = int(input("Введите второе число: "))
 
-def rand_num(num1, num2):
-    return round((time() % 1) * (num2 - num1)) + num1
+arr = ["22", "33", "123", "fert", "ytyy", "55"]
 
-print(rand_num(n1, n2))
+num = int(input("Введите число: "))
+
+def is_there_a_number_in_arr(n):
+    for i in arr:
+        if i.isdigit():
+            if n == int(i):
+                return True
+    return False
+
+res = is_there_a_number_in_arr(num)
+
+if res:
+    print(f"Число {num} присуствует в данном списке")
+else:
+    print(f"Числа {num} в данном списке нет")
+
