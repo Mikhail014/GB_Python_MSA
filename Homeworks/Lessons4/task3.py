@@ -1,6 +1,8 @@
 nums = []
 
 for i in range(5):
-    nums.append(int(input(f"Введите {i + 1}-е число: ")))
+    n = int(input(f"Введите {i + 1}-е число: "))
+    if n not in nums:
+        nums.append(n)
 
-print(list(set(nums)))
+print(nums)
