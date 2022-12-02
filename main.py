@@ -168,29 +168,48 @@
 # print(max, min)
 
 
-a1 = int(input("A: "))
-b1 = int(input("B: "))
-c1 = int(input("C: "))
-
-def discriminant(a, b, c):
-    d = b**2 - (4 * a * c)
-    print(d)
-    if d < 0:
-        return -1
-    elif d >= 0:
-        return d
-
-res = discriminant(a1, b1, c1)
-
-if res == -1:
-    print("Корней нет")
-elif res == 0:
-    print("Один корень: ")
-    print(f"x = {-b1 / (a1 * 2)}")
-else:
-    print("Два корня:")
-    print(f"x1 = {(-b1 - res**0.5) / (a1 * 2)}")
-    print(f"x2 = {(-b1 + res**0.5) / (a1 * 2)}")
+# a1 = int(input("A: "))
+# b1 = int(input("B: "))
+# c1 = int(input("C: "))
+#
+# def discriminant(a, b, c):
+#     d = b**2 - (4 * a * c)
+#     print(d)
+#     if d < 0:
+#         return -1
+#     elif d >= 0:
+#         return d
+#
+# res = discriminant(a1, b1, c1)
+#
+# if res == -1:
+#     print("Корней нет")
+# elif res == 0:
+#     print("Один корень: ")
+#     print(f"x = {-b1 / (a1 * 2)}")
+# else:
+#     print("Два корня:")
+#     print(f"x1 = {(-b1 - res**0.5) / (a1 * 2)}")
+#     print(f"x2 = {(-b1 + res**0.5) / (a1 * 2)}")
 
 
 # print(discriminant(a1, b1, c1))
+
+
+
+
+
+
+
+num1 = int(input("Num 1: "))
+num2 = int(input("Num 2: "))
+
+def foundLCM(n1, n2):
+    count = n1 if n1 > n2 else n2
+    while True:
+        count += 1
+        if count % n1 == 0 and count % n2 == 0:
+            return count
+
+res = foundLCM(num1, num2)
+print(f"Наименьшее общее кратное чисел {num1} и {num2}: {res}")
