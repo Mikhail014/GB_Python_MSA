@@ -9,4 +9,5 @@ for el in nums:
     if nums.count(el) == 1:
         non_rep_elem.append(el)
 
+print(f"Исходный список: {nums}")
 print(f"Количество неповторяющихся элементов: {non_rep_elem}")
