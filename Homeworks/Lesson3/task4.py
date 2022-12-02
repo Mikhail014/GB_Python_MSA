@@ -8,11 +8,10 @@
 """""""""
 
 num = int(input("Введите число: "))
-res = ""
+res = []
 
 while num != 0:
-    res += str(num % 2)
+    res.append(str(num % 2))
     num //= 2
 
-# print("".join(reversed(res)))
-print(f"Двоичное число: {res[::-1]}")
+print(f"Двоичное число: {''.join(res[::-1])}")
