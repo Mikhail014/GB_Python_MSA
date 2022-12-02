@@ -1,9 +1,13 @@
 n = int(input("Введите натуральное число: "))
 res = []
+i = 2
 
-for i in range(2, n):
+while n != 1:
     if n % i == 0:
         res.append(i)
+        n //= i
+    else:
+        i += 1
 
 print("Список простых множителей:")
 print(res)
