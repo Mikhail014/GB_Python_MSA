@@ -151,20 +151,46 @@
 
 # Task 1
 
-str1 = input("Enter string of nums: ")
+# str1 = input("Enter string of nums: ")
+#
+# nums = str1.split(" ")
+#
+# max = int(nums[0])
+# min = int(nums[0])
+#
+# for i in nums:
+#     n = int(i)
+#     if n > max:
+#         max = n
+#     elif n < min:
+#         min = n
+#
+# print(max, min)
 
-nums = str1.split(" ")
 
-max = int(nums[0])
-min = int(nums[0])
+a1 = int(input("A: "))
+b1 = int(input("B: "))
+c1 = int(input("C: "))
 
-for i in nums:
-    n = int(i)
-    if n > max:
-        max = n
-    elif n < min:
-        min = n
+def discriminant(a, b, c):
+    d = b**2 - (4 * a * c)
+    print(d)
+    if d < 0:
+        return -1
+    elif d >= 0:
+        return d
 
-print(max, min)
+res = discriminant(a1, b1, c1)
+
+if res == -1:
+    print("Корней нет")
+elif res == 0:
+    print("Один корень: ")
+    print(f"x = {-b1 / (a1 * 2)}")
+else:
+    print("Два корня:")
+    print(f"x1 = {(-b1 - res**0.5) / (a1 * 2)}")
+    print(f"x2 = {(-b1 + res**0.5) / (a1 * 2)}")
 
 
+# print(discriminant(a1, b1, c1))
