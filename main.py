@@ -201,15 +201,15 @@
 
 
 
-num1 = int(input("Num 1: "))
-num2 = int(input("Num 2: "))
-
-def foundLCM(n1, n2):
-    count = n1 if n1 > n2 else n2
-    while True:
-        count += 1
-        if count % n1 == 0 and count % n2 == 0:
-            return count
-
-res = foundLCM(num1, num2)
-print(f"Наименьшее общее кратное чисел {num1} и {num2}: {res}")
+# num1 = int(input("Num 1: "))
+# num2 = int(input("Num 2: "))
+#
+# def foundLCM(n1, n2):
+#     count = n1 if n1 > n2 else n2
+#     while True:
+#         count += 1
+#         if count % n1 == 0 and count % n2 == 0:
+#             return count
+#
+# res = foundLCM(num1, num2)
+# print(f"Наименьшее общее кратное чисел {num1} и {num2}: {res}")
