@@ -128,3 +128,43 @@
 # res = get_index_second_occur_of_str(str, arrStr)
 # print(res)
 
+# file = open('file1')
+#
+# # print(1, file.read())
+# # print(2, file.readline())
+# # print(3, file.readlines())
+#
+# # file.write('text4')
+# file.close()
+
+#with open('file1') as file:
+#     print(1, file.read())
+#     # file.seek(0)
+#     print(1, file.read())
+
+#import second
+#
+# print(second.a)
+
+
+
+
+# Task 1
+
+str1 = input("Enter string of nums: ")
+
+nums = str1.split(" ")
+
+max = int(nums[0])
+min = int(nums[0])
+
+for i in nums:
+    n = int(i)
+    if n > max:
+        max = n
+    elif n < min:
+        min = n
+
+print(max, min)
+
+
