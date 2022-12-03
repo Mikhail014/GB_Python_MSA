@@ -1,6 +1,6 @@
 nums = []
 
-for i in range(13):
+for i in range(7):
     nums.append(int(input(f"Введите {i + 1}-е число: ")))
 
 non_rep_elem = []
