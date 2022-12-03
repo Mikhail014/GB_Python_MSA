@@ -47,9 +47,6 @@ for i in range(0, 5, 2):
         polynom_arr.append(f"{abs(num1 + num2)}")
 
 
-
-print(polynom_arr)
-
 with open("task5sum_of_polynom.txt" , "w") as file:
     file.write(f'{"".join(polynom_arr)} = 0')
 
