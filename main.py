@@ -213,3 +213,15 @@
 #
 # res = foundLCM(num1, num2)
 # print(f"Наименьшее общее кратное чисел {num1} и {num2}: {res}")
+
+# nums = []
+#
+# with open("file.txt", "r") as file:
+#     nums = file.readline().split(" ", )
+#
+# for i, v in enumerate(nums):
+#     nums[i] = int(v)
+#
+# res = [(i, i * i) for i in nums if i % 2 == 0]
+#
+# print(res)
