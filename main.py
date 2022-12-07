@@ -241,3 +241,10 @@
 #         res = v - 1
 #
 # print(res)
+
+# Task 2
+
+# text = "абв вргтзатзтхабв вавышатывщтыв лущаьущьабв аываываы абввфывфв вфывф"
+# textArr = text.split()
+# res = list(filter(lambda x : "абв" not in x, textArr))
+# print(res)
