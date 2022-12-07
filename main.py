@@ -225,3 +225,19 @@
 # res = [(i, i * i) for i in nums if i % 2 == 0]
 #
 # print(res)
+
+# Task 1
+
+# nums = []
+#
+# with open("file1", "r") as file:
+#     nums = file.readline().split()
+#
+# nums = list(map(int, nums))
+# res = None
+#
+# for i, v in enumerate(nums):
+#     if i > 0 and nums[i] - 1 != nums[i - 1]:
+#         res = v - 1
+#
+# print(res)
