@@ -14,7 +14,7 @@ print("------------------------------------------------------")
 
 print()
 
-candies = 202
+candies = 2021
 isEnd = False
 modeBot = False
 players = []
