@@ -14,6 +14,7 @@
 #             print(f"{num1} не является квадратом числа {num2}")
 #
 # checkQuad(n1, n2)
+from time import sleep
 
 # n1 = int(input("Первое число: "))
 # n2 = int(input("Второе число: "))
@@ -248,3 +249,65 @@
 # textArr = text.split()
 # res = list(filter(lambda x : "абв" not in x, textArr))
 # print(res)
+
+text_math = input("Введите математический пример (без пробелов): ")
+
+def get_list_math_items(text):
+    math_items = []
+    n = ""
+    for item in text:
+        if item.isdigit():
+            n += item
+        else:
+            math_items.append(n)
+            n = ""
+            math_items.append(item)
+
+    math_items.append(n)
+    return math_items
+
+list_math = get_list_math_items(text_math)
+list_math = list(map(lambda x: int(x) if x.isdigit() else x, list_math))
+
+def math_op_in_list(math_op, list_m):
+    ind_math_op = list_math.index(math_op)
+    num1 = list_m[ind_math_op - 1]
+    num2 = list_m[ind_math_op + 1]
+    for i in range(3):
+        list_math.pop(ind_math_op - 1)
+    if math_op == "+":
+        list_m.insert(ind_math_op - 1, num1 + num2)
+    elif math_op == "-":
+        list_m.insert(ind_math_op - 1, num1 - num2)
+    elif math_op == "*":
+        list_m.insert(ind_math_op - 1, num1 * num2)
+    elif math_op == "/":
+        list_m.insert(ind_math_op - 1, num1 / num2)
+
+while len(list_math) > 1:
+    sleep(1)
+    math_op_list = list(filter(lambda x: isinstance(x, str), list_math))
+    print(*list_math)
+    if "*" in list_math or "/" in list_math:
+        if "*" in list_math:
+            math_op_in_list("*", list_math)
+        elif "/" in list_math:
+            math_op_in_list("/", list_math)
+    else:
+        if "+" in list_math:
+            math_op_in_list("+", list_math)
+        elif "-" in list_math:
+            math_op_in_list("-", list_math)
+    print(math_op_list)
+sleep(1)
+print(list_math[0])
+
+# num_of_operations = len(list_math) // 2
+
+# for i in range(num_of_operations):
+#     if "*" in list_math or "/" in list_math:
+#         ind_math_op = list_math.index("*")
+#         num1 = list_math[ind_math_op - 1]
+#         num2 = list_math[ind_math_op + 1]
+#         list_math.pop()
+
