@@ -12,7 +12,10 @@ def action_choice():
     print("5. Поиск записи;")
     print("6. Удаление записи.")
     print("----------------")
-    return int(input("Ответ: "))
+    enter_num = int(input("Ответ: "))
+    while enter_num < 1 or enter_num > 6:
+        enter_num = int(input("Ошибка! Введи число от 1 до 6: "))
+    return enter_num
 
 def start_action(num_action):
     if num_action == 1:

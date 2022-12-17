@@ -10,7 +10,8 @@ def export_to_file(filename, mode):
                     file.write(f"{value}; ")
                 if key == "Описание":
                     file.write(f"\n")
-        # file.write(f"\n\n")
+        if mode == 2:
+            file.write(f"\n")
 
 def import_from_file(filename):
     with open(filename, "r", encoding="utf-8") as file:
