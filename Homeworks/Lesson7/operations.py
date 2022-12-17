@@ -13,6 +13,7 @@ def print_contacts():
     for contact in data.list_data:
         for key, value in contact.items():
             contacts += f"{key}: {value}\n"
+        contacts += "\n"
     return contacts
 
 def search_contact():

@@ -32,5 +32,9 @@ def start_action(num_action):
         mode = int(input("Ответ: "))
         while mode < 1 or mode > 2:
             mode = input("Введите 1 или 2: ")
-        data.export_from_file(fn, mode)
+        data.export_to_file(fn, mode)
         return f"Данные экспортированы в файл {fn}!"
+    elif num_action == 4:
+        fn = input("Введите имя файла: ")
+        data.import_from_file(fn)
+        return f"Данные импортированы из файла {fn}!"

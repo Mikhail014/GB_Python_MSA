@@ -1,6 +1,6 @@
 list_data = []
 
-def export_from_file(filename, mode):
+def export_to_file(filename, mode):
     with open(filename , "a", encoding="utf-8") as file:
         for contact in list_data:
             for key, value in contact.items():
@@ -8,9 +8,11 @@ def export_from_file(filename, mode):
                     file.write(f"{value}; \n")
                 elif mode == 2:
                     file.write(f"{value}; ")
-        file.write(f"\n")
+                if key == "Описание":
+                    file.write(f"\n")
+        # file.write(f"\n\n")
 
-def import_to_file(filename):
+def import_from_file(filename):
     with open(filename, "r", encoding="utf-8") as file:
         data_file = file.readlines()
         imp_data = []
@@ -26,6 +28,3 @@ def import_to_file(filename):
                     "Телефон": imp_data[i + 2],
                     "Описание": imp_data[i + 3]
                 })
-
-import_to_file("cont")
-print(list_data)
