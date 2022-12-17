@@ -9,8 +9,7 @@ def action_choice():
     print("2. Вывод записей на экран;")
     print("3. Экспорт записей;")
     print("4. Импорт записей;")
-    print("5. Поиск записи;")
-    print("6. Удаление записи.")
+    print("5. Выход из программы.")
     print("----------------")
     enter_num = int(input("Ответ: "))
     while enter_num < 1 or enter_num > 6:
@@ -41,3 +40,5 @@ def start_action(num_action):
         fn = input("Введите имя файла: ")
         data.import_from_file(fn)
         return f"Данные импортированы из файла {fn}!"
+    elif num_action == 5:
+        return "Вы вышли из программы! Удачи!"

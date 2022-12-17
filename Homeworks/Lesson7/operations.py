@@ -9,15 +9,9 @@ def add_contact(lastname, firstname, phone, about):
     })
 
 def print_contacts():
-    contacts = ""
+    contacts = "\n"
     for contact in data.list_data:
         for key, value in contact.items():
             contacts += f"{key}: {value}\n"
         contacts += "\n"
     return contacts
-
-def search_contact():
-    pass
-
-def delete_contact():
-    pass
