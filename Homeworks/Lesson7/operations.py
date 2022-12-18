@@ -7,6 +7,7 @@ def add_contact(lastname, firstname, phone, about):
         "Телефон": phone,
         "Описание": about
     })
+    data.export_to_file("contacts")
 
 def print_contacts():
     contacts = "\n"

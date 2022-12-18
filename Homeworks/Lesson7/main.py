@@ -1,4 +1,7 @@
 import interface
+import data
+
+data.import_from_file("contacts")
 
 while True:
     num_op = interface.action_choice()
