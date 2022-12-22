@@ -4,10 +4,9 @@ mail_employee = []
 selected_role = ""
 is_active_program = True
 
-def export_to_file(filename, arr):
+def export_to_file(filename, message):
     with open(filename, "a", encoding="utf-8") as file:
-        for i in arr:
-            file.write(f"{i}\n")
+        file.write(f"{message}\n")
 
 def import_from_file(filename, arr):
     with open(filename, "r", encoding="utf-8") as file:

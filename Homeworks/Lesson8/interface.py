@@ -10,11 +10,10 @@ def select_role():
     while num_role < 1 or num_role > 3:
         num_role = int(input("Введите число от 1 до 3 включительно: "))
     roles.set_role(roles.roles_list[num_role - 1])
-    print(f"Вы вошли как {data.selected_role}!\n")
-
 
 def action_mode(role):
-    print("\nВыбери действие:")
+    print(f"\nВы вошли как: {data.selected_role}!")
+    print("Выберите действие:")
     if role != roles.roles_list[0]:
         print("1. Написать руководителю компании")
     if role != roles.roles_list[1]:
